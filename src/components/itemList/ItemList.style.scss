@@ -1,0 +1,35 @@
+.done{
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.item-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: max-content ;
+    
+    label{
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    .button-delete{
+       right: 0;
+       border-radius: 50%;
+       height: 25px;
+       padding: 0;
+       width: 25px;
+       background: transparent;
+       border: 1px solid black;
+
+       &:hover{
+        opacity: 0.5;
+       }
+    }
+
+}
