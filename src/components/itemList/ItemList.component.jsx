@@ -24,7 +24,7 @@ function ItemList({data}) {
     return (
         <div className="item-list">
             <label className={data.complete ? 'done' : ''}>
-                <input type="checkbox" checked={data.complete} onChange={doneundone} />
+                <input className='checkbox' type="checkbox" checked={data.complete} onChange={doneundone} />
                 {data.task}
             </label>
             <button className='button-delete' onClick={deleteItem}>X</button>

@@ -18,8 +18,7 @@ function CounterItemList() {
 
     return (
         <div className="counter">
-            <label>total: { items.length }, </label>
-            <label> undone: { undone }</label>
+            <label> undone: { undone } (total { items.length }) </label>
         </div>
     )
 }

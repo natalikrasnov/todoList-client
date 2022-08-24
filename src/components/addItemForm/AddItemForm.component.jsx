@@ -18,7 +18,6 @@ function AddItemForm() {
             setIsErrorMessage(true)
             return
         } 
-        debugger
         dispatchItems(addItemAction(createNewItem(event.target[0].value)))
         insertNewTodoItem(createNewItem(event.target[0].value))
         event.target[0].value = ""
@@ -31,11 +30,10 @@ function AddItemForm() {
 
     return (
         <form className="add-item-form" onSubmit={addItem}>
-            <div>
-                <input onInput={(event)=>setInput(event.target.value)}/>
-                <FormButton type='submit' color='white' backgroundColor='grey'>ADD</FormButton>
-            </div>
-            {isErrorMessage && <label className='error-message'>error</label>}
+            <input placeholder="enter new TODO here" onInput={(event)=>setInput(event.target.value)}/>
+            {isErrorMessage && <span className='error-message'>error</span>}
+            <FormButton type='submit' color='white' backgroundColor='grey' disabled={isErrorMessage}>ADD</FormButton>
+
         </form>
     )
 }

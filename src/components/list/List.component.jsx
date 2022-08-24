@@ -22,6 +22,7 @@ function List() {
     return (
         <div className="list"> 
             <CounterItemList />
+            <div className='content-list'>
             {!items || items.length == 0
                 ?
                 <span className='empty-list-message'>
@@ -32,7 +33,8 @@ function List() {
                     <ItemList data={item} key={index} />
                     )
                 )
-            }
+                }
+            </div>
             <AddItemForm />
         </div>
     )

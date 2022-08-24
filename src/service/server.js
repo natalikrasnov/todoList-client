@@ -20,7 +20,6 @@ export const getAllTodoItems = async () => {
 
 
 export const insertNewTodoItem = async (data) => {
-  debugger
   const result = await axios.put(baseURL, data);
   return getDataResult(result);
 };
